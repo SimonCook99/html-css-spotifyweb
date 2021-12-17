@@ -5,11 +5,11 @@
 }
 
 /* Desktop first*/
-
+/* sezione header*/
 header{
     width: 80%;
     height: 90px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #080b12;
     position: absolute;
     right: 0;
     display: flex;
@@ -25,10 +25,16 @@ header .button{
     border-radius: 20px;
     padding: 10px 30px;
     text-transform: uppercase;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
-nav{
+.button:hover{
+    transform: scale(1.1,1.1);
+}
+
+
+/* sezione navbar a sinistra*/
+nav.sidebar-left{
     background-color: black;
     height: calc(100vh - 90px);
     width: 20%;
@@ -42,19 +48,87 @@ nav .content{
     background-color: yellow;
 }
 
-/* .button:hover{
-    transform: scale(1.1,1.1);
-} */
 
 
+
+/* sezione main*/
 main{
     width: 80%;
     height: calc(100vh - 180px);
-    background-color: red;
+    background-color: #141922;
     overflow-y: scroll;
     position: relative;
     top: 90px;
 }
+
+main .main-content{
+    width: 95%;
+    margin: 20px auto;
+    background-color: blue;
+
+    /* height: 100vh; */
+}
+
+.main-content nav ul.categorie{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-content nav ul li{
+    list-style: none;
+    display: inline-block;
+    color: gray;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+section{
+    margin-bottom: 40px;
+}
+
+.main-content h2{
+    color: white;
+    margin: 20px 0px;
+}
+
+.main-content h3{
+    color: white;
+    margin: 10px 0px;
+    text-align: center;
+}
+
+.main-content p{
+    color: grey;
+    text-align: center;
+}
+
+/* inzio sezione "recenti" */
+.recent .album-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.album-container .album{
+    width: 15%;
+}
+
+.album-container .album img.thumbnail{
+    max-width: 100%;
+}
+
+
+/* inizio sezione utente*/
+.sezione-utente .album-container{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.sezione-utente .album-container .album{
+    margin-right: 20px;
+}
+
+
 
 .clearfix{
     clear: both;
@@ -65,4 +139,45 @@ main{
 footer{
     height: 90px;
     background-color: #282828;
+}
+
+
+
+
+/* inizio sezione media-query*/
+
+@media screen and (max-width: 768px){
+
+    .recent .album-container{
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .album-container .album{
+        width: 21%;
+        margin-right: 15px;
+    }
+
+    .sezione-utente .album-container .album{
+        margin-right: 15px;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 576px){
+
+    .album-container .album{
+        width: 47%;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+
+    .sezione-utente .album-container .album{
+        margin-right: 15px;
+    }
+
+    
 }
