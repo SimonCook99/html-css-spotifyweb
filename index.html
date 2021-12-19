@@ -5,22 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
-    <div class="main-container">
 
-    </div>
+
 
     <header>
 
         <a class="button" href="#">Effettua l'upgrade</a>
-
     </header>
 
 
     <nav class="sidebar-left">
         <div class="content">
+
+            <div class="options">
+                <img class="logo" src="img/logo.svg" alt="logo">
+
+                <div class="option selected">
+                    <img class="icon" src="img/home.svg" alt="home">
+                    <span>Home</span>
+                </div>
+                <div class="option">
+                    <img class="icon" src="img/search.svg" alt="cerca">
+                    <span>Cerca</span>
+                </div>
+                <div class="option">
+                    <img class="icon" src="img/libreria.svg" alt="libreria">
+                    <span>La tua libreria</span>
+                </div>
+            </div>
+
+            <div class="playlists">
+                <h3>PLAYLIST</h3>
+
+                <div class="add-playlist">
+                    <i class="fas fa-plus"></i>
+                    <span>Cerca playlist</span>
+                </div>
+
+                <ul>
+                    <li><span>Nome Playlist</span></li>
+                    <li><span>Nome Playlist</span></li>
+                    <li><span>Nome Playlist</span></li>
+                    <li><span>Nome Playlist</span></li>
+                    <li><span>Nome Playlist</span></li>
+                    <li><span>Nome Playlist</span></li>
+                    <li><span>Nome Playlist</span></li>
+                </ul>
+            </div>
+
+            <div class="user">
+                <div class="download">
+                    <img class="icon" src="img/download.svg" alt="download">
+                    <span>Installa app</span>
+                </div>
+
+                <hr>
+                
+                <div class="user-info">
+                    <img class="icon" src="img/profile.svg" alt="user">
+                    <h4>John Doe</h4>
+                </div>
+            </div>
 
         </div>
     </nav>
@@ -104,6 +153,8 @@
 
                 <h2>Creato per John Doe</h2>
 
+                <p>Più ascolti, più accurati saranno i suggerimenti</p>
+
                 <div class="album-container">
                     <div class="album">
                         <img class="thumbnail" src="img/radar.jpeg" alt="radar">
@@ -120,7 +171,30 @@
                 </div>
             </section>
             <!--Fine sezione album creati per l'utente-->
-     
+            
+
+            <section class="artisti">
+
+                <h2>Artisti più popolari</h2>
+
+                <p>Più ascolti, più accurati saranno i suggerimenti</p>
+
+                <div class="album-container">
+                    <div class="album">
+                        <img class="artist" src="img/youg.jpeg" alt="Youg">
+                        <div class="details">
+                            <h3 class="title">Lana del Rey</h3>                        
+                        </div>
+                    </div>
+
+                    <div class="album">
+                        <img class="artist" src="img/einaudi.jpeg" alt="einaudi">
+                        <div class="details">
+                            <h3 class="title">Ludovico Einaudi</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
         </div>

@@ -8,7 +8,7 @@
 /* sezione header*/
 header{
     width: 80%;
-    height: 90px;
+    height: 80px;
     background-color: #080b12;
     position: absolute;
     right: 0;
@@ -36,16 +36,80 @@ header .button{
 /* sezione navbar a sinistra*/
 nav.sidebar-left{
     background-color: black;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 80px);
     width: 20%;
     float: left;
 }
 
 nav .content{
-    width: 80%;
     margin: auto;
     height: 100%;
-    background-color: yellow;
+    /* background-color: yellow; */
+}
+
+.options img.logo {
+    max-width: 60%;
+    margin: 20px 15px;
+}
+
+
+.option { /* classe comune delle varie opzioni*/
+    height: 30px;
+    vertical-align: middle;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+.option .icon, .user .icon{
+    width: 20px;
+    vertical-align: middle;
+}
+
+.option.selected { /* classe specifica per la prima opzione*/
+    border-left: 3px solid green;
+    padding-left: 12px;
+}
+
+span{
+    vertical-align: middle;
+    margin-left: 5px;
+    color: grey;
+}
+
+
+.playlists h3{
+    color: white;
+    margin: 15px;
+}
+
+.add-playlist i{
+    background-color: grey;
+    padding: 10px;
+    margin-left: 15px;
+}
+
+.playlists ul li{
+    margin: 10px;
+}
+
+
+.sidebar-left .user {
+    margin: 15px 35px 0px 15px;
+}
+
+.download, .user-info {
+    padding: 10px 0px;
+}
+
+.user-info .icon {
+    background-color: grey;
+    border-radius: 50%;
+}
+
+.user-info h4{
+    display: inline-block;
+    color: white;
+    vertical-align: middle;
+    padding-left: 5px;
 }
 
 
@@ -54,17 +118,17 @@ nav .content{
 /* sezione main*/
 main{
     width: 80%;
-    height: calc(100vh - 180px);
+    height: calc(100vh - 160px);
     background-color: #141922;
     overflow-y: scroll;
     position: relative;
-    top: 90px;
+    top: 80px;
 }
 
 main .main-content{
     width: 95%;
-    margin: 20px auto;
-    background-color: blue;
+    margin: 10px auto;
+    /* background-color: blue; */
 
     /* height: 100vh; */
 }
@@ -81,6 +145,7 @@ main .main-content{
     color: gray;
     text-transform: uppercase;
     margin-right: 20px;
+    margin-top: 15px;
 }
 
 section{
@@ -98,7 +163,7 @@ section{
     text-align: center;
 }
 
-.main-content p{
+.main-content .recent p{
     color: grey;
     text-align: center;
 }
@@ -107,6 +172,7 @@ section{
 .recent .album-container{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .album-container .album{
@@ -119,15 +185,31 @@ section{
 
 
 /* inizio sezione utente*/
-.sezione-utente .album-container{
+.sezione-utente .album-container, .artisti .album-container{
     display: flex;
     justify-content: flex-start;
 }
 
-.sezione-utente .album-container .album{
+.sezione-utente .album-container .album, .artisti .album-container .album{
     margin-right: 20px;
 }
 
+.sezione-utente p, .artisti p {
+    color: grey;
+    margin: -15px 0px 15px 0px;
+}
+
+
+
+/* inizio sezione artisti*/
+.artisti .album-container .artist{
+    border-radius: 50%;
+}
+
+.album-container .album img.artist{
+    max-width: 100%;
+    border-radius: 50%;
+}
 
 
 .clearfix{
@@ -137,8 +219,12 @@ section{
 
 
 footer{
-    height: 90px;
+    height: 80px;
     background-color: #282828;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 
@@ -146,7 +232,18 @@ footer{
 
 /* inizio sezione media-query*/
 
-@media screen and (max-width: 768px){
+/* breakpoint "md" */
+@media screen and (min-width:768px) and (max-width: 991px){
+
+    header{
+        width: 75%;
+    }
+    nav.sidebar-left{
+        width: 25%;
+    }
+    main{
+        width: 75%;
+    }
 
     .recent .album-container{
         justify-content: flex-start;
@@ -165,8 +262,19 @@ footer{
     
 }
 
+/* breakpoint "s" */
+@media screen and (min-width: 576px) and (max-width: 767px){
 
-@media screen and (max-width: 576px){
+    /* sistemazione larghezze per la parte mobile*/
+    header{
+        width: 70%;
+    }
+    nav.sidebar-left{
+        width: 30%;
+    }
+    main{
+        width: 70%;
+    }
 
     .album-container .album{
         width: 47%;
@@ -180,4 +288,36 @@ footer{
     }
 
     
+}
+
+/* breakpoint "xs" */
+@media screen and (max-width: 576px){
+
+    nav.sidebar-left{
+        width: 10%;
+    }
+
+    header{
+        width: 90%;
+    }
+
+    main{
+        width: 90%;
+    }
+
+    .album-container .album {
+        width: 47%;
+    }
+
+    span{
+        display: none;
+    }
+
+    div.playlists{
+        display: none;
+    }
+
+    .options img.logo{
+        content: url("img/logo-small.svg");
+    }
 }
