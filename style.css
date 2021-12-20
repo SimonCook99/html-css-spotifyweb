@@ -88,6 +88,11 @@ span{
     margin-left: 15px;
 }
 
+.playlists ul{
+    height: 35vh;
+    overflow-y: auto;
+}
+
 .playlists ul li{
     margin: 10px;
 }
@@ -152,8 +157,12 @@ main .main-content{
     margin-top: 15px;
 }
 
-.categorie li:first-child{ /* sottolineatura al primo elemento della lista*/
+
+li .sottolineatura{ /* sottolineatura per il primo elemento della lista*/
     border-bottom: 2px solid #adff2f;
+    width: 50%;
+    transform: translate(50%, 0%);
+    padding-top: 5px;
 }
 
 section{
@@ -190,6 +199,11 @@ section{
 .album-container .album img.thumbnail{
     max-width: 100%;
 }
+
+
+/* .album .overlay, .album .fa-play-circle{
+    display: none;
+} */
 
 
 /* inizio sezione utente*/
@@ -245,12 +259,13 @@ footer .song{
 }
 
 footer img{
-    width: 45px;
+    width: 20%;
     margin: 0px 10px;
 }
 
 footer .description{
     position: relative;
+    width: 60%;
 }
 
 footer h4{
@@ -267,6 +282,11 @@ footer .song i{
     color: grey;
     padding-right: 20px;
 }
+
+footer .player-icons{
+    display: flex;
+}
+
 
 /* classi comuni per le barre di ascolto e volume*/
 footer .bar{
@@ -286,6 +306,12 @@ footer .playing{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 40%;
+}
+
+
+footer .time-play {
+    width: 100%;
 }
 
 footer .music-buttons i{
@@ -302,6 +328,10 @@ footer i.fa-play-circle{
 footer .time-play, footer .volume{
     display: flex;
     align-items: center;
+}
+
+footer .volume, footer .song{
+    width: 230px;
 }
 
 footer .time-play .grey.bar{
