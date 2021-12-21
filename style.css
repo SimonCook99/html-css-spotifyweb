@@ -337,6 +337,34 @@ footer .time-play {
     width: 100%;
 }
 
+
+/* selettori comuni di entrambre le barre presenti*/
+footer .bars{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 90%;
+}
+
+footer .song-progress{
+    width: 15px;
+    /* display: none; */
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    display: none;
+}
+
+/* posizionamento del pallino differente per le 2 barre*/
+footer .time-play .song-progress{
+    left: 80px;
+}
+footer .volume .song-progress{
+    left: 25px;
+}
+
+
 footer .music-buttons i{
     color: white;
     font-size: 20px;
@@ -418,15 +446,37 @@ footer .volume .white.bar{
     cursor: pointer;
 }
 
-.user .download:hover span{
+.user .download:hover span, .user .download:hover img{
     color: white;
     cursor: pointer;
+    opacity: 1;
 }
 
 .main-content ul li:hover{
     color: white;
     cursor: pointer;
 }
+
+footer .player-icons i:hover {
+    color: white;
+    cursor: pointer;
+}
+
+footer i.fa-play-circle:hover{
+    font-size: 28px;
+    cursor: pointer;
+}
+
+footer .bars:hover{
+    cursor: pointer;
+}
+footer .bars:hover .white.bar{
+    background-color: #adff2f;
+}
+footer .bars:hover .song-progress{
+    display: block;
+}
+
 
 
 
@@ -465,6 +515,10 @@ footer .volume .white.bar{
 
     .sezione-utente .album-container .album{
         margin-right: 15px;
+    }
+
+    footer .player-icons {
+        display: block;
     }
 
     
@@ -509,5 +563,13 @@ footer .volume .white.bar{
 
     .options img.logo{
         content: url("img/logo-small.svg");
+    }
+
+    footer .player-icons {
+        display: block;
+    }
+
+    footer .volume, footer .song {
+        width: 150px;
     }
 }
