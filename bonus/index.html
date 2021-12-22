@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify BONUS</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+
+    <header>
+
+        <a class="button" href="#">Effettua l'upgrade</a>
+    </header>
+
+
+    <nav class="sidebar-left">
+        <div class="content">
+
+            <div class="options">
+                <img class="logo" src="img/logo.svg" alt="logo">
+
+                <div class="option selected">
+                    <img class="icon" src="img/home.svg" alt="home">
+                    <span>Home</span>
+                </div>
+                <div class="option">
+                    <img class="icon" src="img/search.svg" alt="cerca">
+                    <span>Cerca</span>
+                </div>
+                <div class="option">
+                    <img class="icon" src="img/libreria.svg" alt="libreria">
+                    <span>La tua libreria</span>
+                </div>
+            </div>
+
+            <div class="playlists">
+                <h3>PLAYLIST</h3>
+
+                <div class="add-playlist">
+                    <i class="fas fa-plus"></i>
+                    <span>Cerca playlist</span>
+                </div>
+
+                <ul>
+                    <li><span>Nome Playlist</span></li>
+                    <li><span>Nome Playlist</span></li>
+                    <li><span>Nome Playlist</span></li>
+                    <li><span>Nome Playlist</span></li>
+                    <li><span>Nome Playlist</span></li>
+                    <li><span>Nome Playlist</span></li>
+                    <li><span>Nome Playlist</span></li>
+                </ul>
+            </div>
+
+            <div class="user">
+                <div class="download">
+                    <img class="icon" src="img/download.svg" alt="download">
+                    <span>Installa app</span>
+                </div>
+
+                <hr>
+                
+                <div class="user-info">
+                    <img class="icon" src="img/profile.svg" alt="user">
+                    <h4>John Doe</h4>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <main>
+        <div class="main-content">
+
+            <!--barra di navigazione superiore-->
+            <nav>
+                <ul class="categorie">
+                    <li>In evidenza <div class="sottolineatura"></div></li>
+                    <li>Podcast</li>
+                    <li>Classifiche</li>
+                    <li>Generi e Mood</li>
+                    <li>Nuove uscite</li>
+                    <li>Scopri</li>
+                </ul>
+            </nav>
+
+            <!--Sezione degli album recenti-->
+            <section class="recent">
+                <h2>Recently played</h2>
+
+                <div class="album-container">
+                    <!--Contenitore del singolo album-->
+                    <div class="album">
+
+                        <!--Contenitore della copertina dell'album, assieme all'overlay e l'icona di play-->
+                        <div class="thumbnail-container">
+                            <img class="thumbnail" src="img/metal_lifting.jpg" alt="heavy metal">
+                            <div class="overlay"></div>
+                            <i class="far fa-play-circle"></i>
+                        </div>
+                        
+                        <!--Contenitore dei dettagli del brano-->
+                        <div class="details">
+                            <h3 class="title">Heavy Metal</h3>
+                            <p>Subtitle</p>
+                        </div>
+                    </div>
+
+                    <div class="album">
+                        <div class="thumbnail-container">
+                            <img class="thumbnail" src="img/stranger.jpeg" alt="stranger things">
+                            <div class="overlay"></div>
+                            <i class="far fa-play-circle"></i>
+                        </div>
+                        <div class="details">
+                            <h3 class="title">Stranger Things Vol.1(a Netflix Orginal Series Soundtrack)</h3>
+                            <p>Kyle Dixon & Michael Stein</p>
+                        </div>
+                    </div>
+
+                    <div class="album">
+                        <div class="thumbnail-container">
+                            <img class="thumbnail" src="img/aquietplace.jpeg" alt="a quiet place">
+                            <div class="overlay"></div>
+                            <i class="far fa-play-circle"></i>    
+                        </div>
+                        <div class="details">
+                            <h3 class="title">A quiet place</h3>
+                            <p>Subtitle</p>
+                        </div>
+                    </div>
+
+                    <div class="album">
+                        <div class="thumbnail-container">
+                            <img class="thumbnail" src="img/split.jpeg" alt="split">
+                            <div class="overlay"></div>
+                            <i class="far fa-play-circle"></i>        
+                        </div>
+
+                        <div class="details">
+                            <h3 class="title">Split</h3>
+                            <p>Subtitle</p>
+                        </div>
+                    </div>
+
+                    <div class="album">
+                        <div class="thumbnail-container">
+                            <img class="thumbnail" src="img/cure.jpeg" alt="cure">
+                            <div class="overlay"></div>
+                            <i class="far fa-play-circle"></i>        
+                        </div>
+
+                        <div class="details">
+                            <h3 class="title">A cure for wellness</h3>
+                            <p>Subtitle</p>
+                        </div>
+                    </div>
+
+                    <div class="album">
+                        <div class="thumbnail-container">
+                            <img class="thumbnail" src="img/sinister.jpeg" alt="sinister">
+                            <div class="overlay"></div>
+                            <i class="far fa-play-circle"></i>        
+                        </div>
+
+                        <div class="details">
+                            <h3 class="title">Sinister</h3>
+                            <p>Subtitle</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!--Fine sezione degli album recenti-->
+
+
+            <!--Inizio sezione album creati per l'utente-->
+            <section class="sezione-utente">
+
+                <h2>Creato per John Doe</h2>
+
+                <p>Più ascolti, più accurati saranno i suggerimenti</p>
+
+                <div class="album-container">
+                    <div class="album">
+                        <div class="thumbnail-container">
+                            <img class="thumbnail" src="img/radar.jpeg" alt="radar">
+                            <div class="overlay"></div>
+                            <i class="far fa-play-circle"></i>        
+                        </div>
+
+                        <div class="details">
+                            <h3 class="title">Release radar</h3>                        
+                        </div>
+                    </div>
+
+                    <div class="album">
+                        <div class="thumbnail-container">
+                            <img class="thumbnail" src="img/mixdaily.jpeg" alt="Daily mix">
+                            <div class="overlay"></div>
+                            <i class="far fa-play-circle"></i>    
+    
+                        </div>
+
+                        <div class="details">
+                            <h3 class="title">Daily Mix 1</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Fine sezione album creati per l'utente-->
+            
+            <!--inizio sezione degli artisti più popolari-->
+            <section class="artisti">
+
+                <h2>Artisti più popolari</h2>
+
+                <p>Più ascolti, più accurati saranno i suggerimenti</p>
+
+                <div class="album-container">
+                    <div class="album">
+                        <div class="thumbnail-container">
+                            <img class="artist" src="img/youg.jpeg" alt="Youg">
+                            <div class="overlay"></div>
+                            <i class="far fa-play-circle"></i>        
+                        </div>
+
+                        <div class="details">
+                            <h3 class="title">Lana del Rey</h3>                        
+                        </div>
+                    </div>
+
+                    <div class="album">
+                        <div class="thumbnail-container">
+                            <img class="artist" src="img/einaudi.jpeg" alt="einaudi">
+                            <div class="overlay"></div>
+                            <i class="far fa-play-circle"></i>        
+                        </div>
+
+                        <div class="details">
+                            <h3 class="title">Ludovico Einaudi</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+    </main>
+
+    <!--clarfix di servizio per il float della sidebar-->
+    <div class="clearfix"></div>
+
+
+    <!--inizio footer-->
+    <footer>
+
+        <!--Sezione sinistra(canzone in riproduzione)-->
+        <div class="song">
+            <img src="img/sinister.jpeg" alt="sinister">
+
+            <div class="description">
+                <h4>Sinister</h4>
+                <p>Brano nome</p>
+            </div>
+
+            <div class="player-icons">
+                <i class="far fa-heart"></i>
+                <i class="far fa-folder"></i>
+            </div>
+            
+        </div>
+
+        <!--Sezione centrale (icone varie e barra di ascolto)-->
+        <div class="playing">
+            <div class="music-buttons">
+                <i class="fas fa-random"></i>
+                <i class="fas fa-step-backward"></i>
+                <i class="far fa-play-circle"></i>
+                <i class="fas fa-step-forward"></i>
+                <i class="fas fa-redo-alt"></i>
+            </div>
+
+            <div class="time-play">
+                <span>0:25</span>
+                <div class="bars">
+                    <div class="white bar">
+                        <div class="song-progress"></div>
+                    </div>
+                    <div class="grey bar"></div>
+                </div>
+                <span>4:35</span>
+            </div>
+        </div>
+
+        <!--Sezione destra (volume)-->
+        <div class="volume">
+            <i class="fas fa-list"></i>
+            <i class="fas fa-desktop"></i>
+            <i class="fas fa-volume-up"></i>
+
+            <div class="bars">
+                <div class="white bar"></div>
+                <div class="grey bar"></div>
+                <div class="song-progress"></div>
+            </div>
+            
+
+        </div>
+    </footer>
+
+</body>
+</html>

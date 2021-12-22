@@ -136,9 +136,6 @@ main{
 main .main-content{
     width: 95%;
     margin: 10px auto;
-    /* background-color: blue; */
-
-    /* height: 100vh; */
 }
 
 .main-content nav ul.categorie{
@@ -209,7 +206,8 @@ section{
     height: 98%; /* non so perchè ma se metto 100% l'overlay sfora leggermentw di qualche pixel*/
     position: absolute;
     top: 0;
-    display: none;
+    transition: all 0.5s;
+    opacity: 0; /* inizialmente invisibile*/
 }
 
 .album i.far.fa-play-circle {
@@ -219,7 +217,8 @@ section{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: none;
+    transition: all 0.5s;
+    opacity: 0;
 }
 
 
@@ -297,7 +296,6 @@ footer h4{
 
 footer .description p{
     width: 100px;
-    /* left: 60px; */
     color: gray;
 }
 
@@ -332,7 +330,6 @@ footer .playing{
     width: 40%;
 }
 
-
 footer .time-play {
     width: 100%;
 }
@@ -358,7 +355,9 @@ footer .song-progress{
 
 /* posizionamento del pallino differente per le 2 barre*/
 footer .time-play .song-progress{
-    left: 80px;
+    /* left: 80px; */
+    right: -5px;
+    top: -5px;
 }
 footer .volume .song-progress{
     left: 25px;
@@ -393,6 +392,7 @@ footer .time-play .grey.bar{
 footer .time-play .white.bar{
     width: 80px;
     margin-left: 10px;
+    position: relative;
 }
 
 /* inizio sezione volume*/
@@ -421,7 +421,7 @@ footer .volume .white.bar{
 }
 
 .album:hover .overlay, .album:hover i.far.fa-play-circle {
-    display: block;
+    opacity: 1;
     cursor: pointer;
 }
 
@@ -481,6 +481,41 @@ footer .bars:hover .white.bar{
 }
 footer .bars:hover .song-progress{
     display: block;
+}
+
+
+/* Sezione animazioni della barra principale del footer*/
+footer .playing .bars:active .white.bar{
+    animation: white-playing 2s linear;
+}
+
+footer .playing .bars:active .song-progress{
+    animation: progress-playing 2s linear;
+    display: block;
+}
+
+/* animzione della barra bianca*/
+@keyframes white-playing{
+
+    50%{
+        width: 500px;
+    }
+
+    100%{
+        width: 80px;
+    }
+}
+
+/* animzione del pallino che segue la barra bianca*/
+@keyframes progress-playing{
+
+    50%{
+        right: 0;
+    }
+
+    100%{
+        right: 0;
+    }
 }
 
 
