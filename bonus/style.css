@@ -185,7 +185,6 @@ section{
 .recent .album-container{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .album-container .album{
@@ -541,6 +540,12 @@ footer .playing .bars:active .song-progress{
         margin-right: 15px;
     }
 
+
+    /* BONUS: far scomparire gli album che vanno accapo*/
+    .album-container .album:nth-child(5), .album-container .album:nth-child(6) {
+        display: none;
+    }
+
     
 }
 
@@ -574,6 +579,12 @@ footer .playing .bars:active .song-progress{
         width: 80%;
     }
 
+
+    /* BONUS: far scomparire gli album che vanno accapo*/
+    .album-container .album:nth-child(3), .album-container .album:nth-child(4), .album-container .album:nth-child(5), .album-container .album:nth-child(6) {
+        display: none;
+    }
+
     
 }
 
@@ -596,6 +607,7 @@ footer .playing .bars:active .song-progress{
     .album-container .album {
         width: 47%;
         margin-bottom: 10px;
+        margin-right: 20px;
     }
 
     span{
@@ -632,5 +644,25 @@ footer .playing .bars:active .song-progress{
 
     footer .volume{
         margin-right: 20px;
+    }
+
+
+    /* BONUS: far scomparire gli album che vanno accapo*/
+    .album-container .album:nth-child(3), .album-container .album:nth-child(4), .album-container .album:nth-child(5), .album-container .album:nth-child(6) {
+        display: none;
+    }
+    
+}
+
+/* media query BONUS, sparizione header quando l'altezza è < 250px*/
+@media screen and (max-height: 250px){
+
+    header{
+        display: none;
+    }
+
+    main{
+        top: 0;
+        height: calc(100vh - 80px);
     }
 }
